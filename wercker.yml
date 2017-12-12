@@ -28,4 +28,24 @@ build:
         code: |
           echo "node version $(node -v) running"
           echo "npm version $(npm -v) running"
+#added for example pipelines
+test1:
+  steps:
+    - script:
+        code: echo 'this is test 1'
+
+test2:
+  steps:
+    - script:
+        code: echo 'this is test 2'
+
+pushtorepo:
+  steps:
+    - script:
+        code: echo 'this is the registry step'
+
+deploy:
+  steps:
+    -script:
+        code: echo 'this is the step where the container would be deployed to k8s'
 
